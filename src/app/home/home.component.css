@@ -1,0 +1,31 @@
+.separator {
+  flex: 1 0 auto;
+}
+
+.botones {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+i:hover {
+  cursor: pointer;
+}
+
+.boton-acceder {
+}
+.boton-registrarse {
+}
+
+.iconos {
+  width: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formulario {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 2rem;
+}

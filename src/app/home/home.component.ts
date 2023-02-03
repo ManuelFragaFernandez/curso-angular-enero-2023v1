@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   public psw: string = '';
   public email: string = '';
 
-  public formulario: boolean = true;
+  public formulario: boolean = false;
 
   constructor(private fb: FormBuilder) {}
 

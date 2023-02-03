@@ -1,36 +1,49 @@
 <p-toolbar>
-  <div>MESASILA</div>
+  <p-image
+    src="assets/showcase/img/logo-mesasila.jpg"
+    alt="Mesasila Logo"
+    width="250"
+  ></p-image>
   <p-divider layout="vertical"></p-divider>
-  <i class="pi pi-user"></i>
-  <i (click)="formulario = !formulario" class="pi pi-sign-in"></i>
-</p-toolbar>
-
-<form *ngIf="formulario" [formGroup]="form" (ngSubmit)="onSubmit()">
-  <span class="p-input-icon-left">
-    <i class="pi pi-search"></i>
-    <input
-      type="text"
-      formControlName="email"
-      pInputText
-      [(ngModel)]="psw"
-      placeholder="Search"
-    />
-  </span>
-  <span class="p-input-icon-right">
-    <i class="pi pi-spin"></i>
-    <input type="password" pInputText [(ngModel)]="email" />
-  </span>
-  <div class="botones">
-    <div class="botones__boton">
-      <p-button (onClick)="onSubmit()" label="Acceder"></p-button>
-      <p-button (onClick)="onRegistrarse()" label="Registrarse"></p-button>
-    </div>
-    <!-- <div class="botones__boton">
-      <button pButton type="button" label="Click"></button>
-      <p-button label="Click"></p-button>
-    </div> -->
+  <div class="iconos">
+    <i (click)="formulario = !formulario" class="pi pi-user"></i>
+    <!-- <div class="separator"></div> -->
+    <i class="pi pi-sign-in"></i>
   </div>
-</form>
+</p-toolbar>
+<div class="formulario">
+  <form *ngIf="formulario" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <span class="p-input">
+      <input
+        type="text"
+        formControlName="email"
+        pInputText
+        placeholder="Email"
+      />
+    </span>
+    <span class="p-input">
+      <i class="pi pi-spin"></i>
+      <input
+        placeholder="Contraseña"
+        formControlName="password"
+        type="password"
+        pInputText
+      />
+    </span>
+    <div class="botones">
+      <div class="boton-acceder">
+        <p-button (onClick)="onSubmit()" label="Acceder"></p-button>
+      </div>
+      <div class="boton-registrarse">
+        <p-button (onClick)="onRegistrarse()" label="Registrarse"></p-button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- [(ngModel)]="psw" -->
+<!-- [(ngModel)]="email" -->
+<!-- <input type="password" pInputText [(ngModel)]="email" /> -->
 
 <!-- Psw: {{ psw }} Email:{{ email }} -->
 <!-- <form [formGroup]="form" (ngSubmit)="onSubmit()">

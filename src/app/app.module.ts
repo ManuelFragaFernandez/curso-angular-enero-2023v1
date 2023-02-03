@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import { DividerModule } from 'primeng/divider';
+import { ImageModule } from 'primeng/image';
 import { InputTextModule } from 'primeng/inputtext';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { ToolbarModule } from 'primeng/toolbar';
@@ -25,6 +26,7 @@ import { HomeComponent } from './home/home.component';
     InputTextModule,
     FormsModule,
     DividerModule,
+    ImageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
