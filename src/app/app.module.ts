@@ -14,21 +14,21 @@ import { AppComponent } from './app.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { HomeComponent } from './home/home.component';
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CatalogoComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    ToolbarModule,
-    SplitButtonModule,
-    ButtonModule,
-    ReactiveFormsModule,
-    InputTextModule,
-    FormsModule,
-    DividerModule,
-    ImageModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent, HomeComponent, CatalogoComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        ToolbarModule,
+        SplitButtonModule,
+        ButtonModule,
+        ReactiveFormsModule,
+        InputTextModule,
+        FormsModule,
+        DividerModule,
+        ImageModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}
