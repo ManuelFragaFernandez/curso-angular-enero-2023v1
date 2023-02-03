@@ -1,0 +1,47 @@
+<p-toolbar>
+  <div>MESASILA</div>
+  <p-divider layout="vertical"></p-divider>
+  <i class="pi pi-user"></i>
+  <i (click)="formulario = !formulario" class="pi pi-sign-in"></i>
+</p-toolbar>
+
+<form *ngIf="formulario" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <span class="p-input-icon-left">
+    <i class="pi pi-search"></i>
+    <input
+      type="text"
+      formControlName="email"
+      pInputText
+      [(ngModel)]="psw"
+      placeholder="Search"
+    />
+  </span>
+  <span class="p-input-icon-right">
+    <i class="pi pi-spin"></i>
+    <input type="password" pInputText [(ngModel)]="email" />
+  </span>
+  <div class="botones">
+    <div class="botones__boton">
+      <p-button (onClick)="onSubmit()" label="Acceder"></p-button>
+      <p-button (onClick)="onRegistrarse()" label="Registrarse"></p-button>
+    </div>
+    <!-- <div class="botones__boton">
+      <button pButton type="button" label="Click"></button>
+      <p-button label="Click"></p-button>
+    </div> -->
+  </div>
+</form>
+
+Psw: {{ psw }} Email:{{ email }}
+<!-- <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Email:</label>
+    <input type="email" formControlName="email" />
+  </div>
+  <div>
+    <label>Password:</label>
+    <input type="password" formControlName="password" />
+  </div>
+  <button type="submit">Acceder</button>
+  <button type="button" [routerLink]="'/home'">Registrarse</button>
+</form> -->
