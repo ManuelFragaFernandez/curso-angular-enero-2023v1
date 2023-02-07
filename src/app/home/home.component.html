@@ -1,44 +1,57 @@
 <p-toolbar>
-  <p-image
-    src="assets/img/logo-mesasila.jpg"
-    alt="Mesasila Logo"
-    width="250"
-  ></p-image>
-  <p-divider layout="vertical"></p-divider>
-  <div class="iconos">
-    <i (click)="formulario = !formulario" class="pi pi-user"></i>
-    <!-- <div class="separator"></div> -->
-    <i class="pi pi-sign-in"></i>
-  </div>
+    <p-image
+        src="assets/img/logo-mesasila.jpg"
+        alt="Mesasila Logo"
+        width="250"
+    ></p-image>
+    <p-divider layout="vertical"></p-divider>
+    <div class="iconos">
+        <i
+            (click)="visualizarFormulario = !visualizarFormulario"
+            class="pi pi-user"
+        ></i>
+        <!-- <div class="separator"></div> -->
+        <i class="pi pi-sign-in"></i>
+    </div>
 </p-toolbar>
 <div class="formulario">
-  <form *ngIf="formulario" [formGroup]="form" (ngSubmit)="onSubmit()">
-    <span class="p-input">
-      <input
-        type="text"
-        formControlName="email"
-        pInputText
-        placeholder="Email"
-      />
-    </span>
-    <span class="p-input">
-      <i class="pi pi-spin"></i>
-      <input
-        placeholder="Contraseña"
-        formControlName="password"
-        type="password"
-        pInputText
-      />
-    </span>
-    <div class="botones">
-      <div class="boton-acceder">
-        <p-button (onClick)="onSubmit()" label="Acceder"></p-button>
-      </div>
-      <div class="boton-registrarse">
-        <p-button (onClick)="onRegistrarse()" label="Registrarse"></p-button>
-      </div>
-    </div>
-  </form>
+    <form
+        *ngIf="visualizarFormulario"
+        [formGroup]="form"
+        (ngSubmit)="onSubmit()"
+    >
+        <span class="p-input">
+            <input
+                type="text"
+                formControlName="email"
+                placeholder="Email"
+                pInputText
+            />
+        </span>
+        <span class="p-input">
+            <input
+                type="password"
+                formControlName="password"
+                placeholder="Contraseña"
+                pInputText
+            />
+        </span>
+        <div class="botones">
+            <div class="boton-acceder">
+                <p-button
+                    type="submit"
+                    (onClick)="onSubmit()"
+                    label="Acceder"
+                ></p-button>
+            </div>
+            <div class="boton-registrarse">
+                <p-button
+                    (onClick)="onRegistrarse()"
+                    label="Registrarse"
+                ></p-button>
+            </div>
+        </div>
+    </form>
 </div>
 
 <!-- [(ngModel)]="psw" -->

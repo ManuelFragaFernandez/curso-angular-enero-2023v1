@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MenuItem } from 'primeng/api';
 
 @Component({
     selector: 'app-home',
@@ -8,25 +7,20 @@ import { MenuItem } from 'primeng/api';
     styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-    public items: MenuItem[] = [];
     public form!: FormGroup;
-
-    public psw: string = '';
-    public email: string = '';
-
-    public formulario: boolean = false;
+    public visualizarFormulario: boolean = false;
 
     constructor(private fb: FormBuilder) {}
-
-    onSubmit() {
-        console.log(this.form.value);
-    }
 
     ngOnInit() {
         this.form = this.fb.group({
             email: ['', [Validators.required, Validators.email]],
             password: ['', Validators.required],
         });
+    }
+
+    onSubmit() {
+        console.log(this.form.value);
     }
 
     onRegistrarse() {

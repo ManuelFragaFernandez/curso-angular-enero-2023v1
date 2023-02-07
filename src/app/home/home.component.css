@@ -12,11 +12,6 @@ i:hover {
   cursor: pointer;
 }
 
-.boton-acceder {
-}
-.boton-registrarse {
-}
-
 .iconos {
   width: 10vh;
   display: flex;
@@ -26,6 +21,5 @@ i:hover {
 .formulario {
   display: flex;
   justify-content: center;
-
   padding-top: 2rem;
 }
